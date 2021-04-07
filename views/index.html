@@ -1,0 +1,46 @@
+
+<!-- This is a static file -->
+<!-- served from your routes in server.js -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="A cool thing made with Glitch">
+
+    <title>Google Page Result</title>
+
+    <link id="favicon" rel="icon" href="https://glitch.com/edit/favicon-app.ico" type="image/x-icon">
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="/style.css">
+
+    <!-- import the webpage's client-side javascript file -->
+    <script src="/script.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <h1>Google Page Result</h1>
+    </header>
+
+    <main>
+      <form>
+        <label>
+        
+          <input name="dream" id="dream" type="text" maxlength="100" required placeholder="KEWORDS!">
+          <input name="website" id="website" type="text" maxlength="100"  placeholder="your website!">
+          <input name="noofpages" id="noofpages" type="number" maxlength="2" value="2" placeholder="number of page">
+        </label>
+        <button type="submit" id="submit-dream">GET GOOGLE RESULTS</button>
+      </form>
+
+      <section class="dreams">
+        <ul id="dreams">
+          
+        </ul>
+      </section>
+    </main>
+
+
+  </body>
+</html>
