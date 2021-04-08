@@ -19,6 +19,9 @@
     <script src="/script.js" defer></script>
   </head>
   <body>
+    <div id="loader">
+      <div class="lds-dual-ring"></div>
+    </div>
     <header>
       <h1>Google Page Result</h1>
     </header>
@@ -27,17 +30,18 @@
       <form>
         <label>
         
-          <input name="dream" id="dream" type="text" maxlength="100" required placeholder="KEWORDS!">
-          <input name="website" id="website" type="text" maxlength="100"  placeholder="your website!">
-          <input name="noofpages" id="noofpages" type="number" maxlength="2" value="2" placeholder="number of page">
+          <input name="dream" id="dream" type="text" maxlength="100" class="search" required placeholder="keywords to search">
+          <input name="website" id="website"  class="website" type="text" maxlength="100"  placeholder="this website occurs in a result">
+          <input name="noofpages" id="noofpages" type="number" class="noofpages" maxlength="2" value="2" placeholder="maximum no of pages to be searched">
         </label>
-        <button type="submit" id="submit-dream">GET GOOGLE RESULTS</button>
+        <button type="submit" id="submit-dream">Search</button>
       </form>
 
       <section class="dreams">
         <ul id="dreams">
           
         </ul>
+        <div id="result"></div>
       </section>
     </main>
 

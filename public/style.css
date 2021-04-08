@@ -13,11 +13,12 @@
   }
   
   h1 {
-    font-style: italic;
+    
     color: #373fff;
     max-width: calc(100% - 5rem);
     line-height: 1.1;
     text-align: center;
+    font-size:14px;
   }
   
   form {
@@ -29,13 +30,33 @@
     margin:0 auto;
   }
   
-  input {
+  input.search {
     border: 1px solid silver;
     display: block;
     font-size: 16px;
     margin-bottom: 10px;
     padding: 15px;
     width: 100%;
+  }
+
+    
+  input.website {
+    border: 1px solid silver;
+    display: inline-block;
+    font-size: 16px;
+    margin-bottom: 10px;
+    padding: 15px;
+    width: 50%;
+    margin-right:10px;
+  }
+  input.noofpages {
+    border: 1px solid silver;
+    display: inline-block;
+    font-size: 16px;
+    margin-bottom: 10px;
+    padding: 15px;
+    width: 7%;
+    margin-right:20px;
   }
   
   form button {
@@ -45,8 +66,10 @@
     cursor: pointer;
     font-size: inherit;
     line-height: 1.6em;
-    padding: 0.25em 1em;
-    max-width: 100% 
+    padding: 0.7em 1em;
+    /* max-width: 30%  */
+    display: inline-block;
+    width: 200px;
   }
   
   form button:hover {
@@ -75,3 +98,51 @@
     background-color: black;
     color:#fff;
   }
+  #result{
+    font-size:30px;
+    color:black;
+    max-width: 1000px;
+    margin:0 auto;
+  }
+  #result strong{
+    color:red;
+    font-size:42px;
+  }
+
+  #loader{
+    background-color:rgba(0,0,0,0.8);
+    top:0;
+    right:0;
+    bottom:0;
+    left:0;
+    display: none;
+    position: fixed;
+    text-align: center;
+  }
+
+  .lds-dual-ring {
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    margin-top:10%;
+  }
+  .lds-dual-ring:after {
+    content: " ";
+    display: block;
+    width: 64px;
+    height: 64px;
+    margin: 8px;
+    border-radius: 50%;
+    border: 6px solid #fff;
+    border-color: #fff transparent #fff transparent;
+    animation: lds-dual-ring 1.2s linear infinite;
+  }
+  @keyframes lds-dual-ring {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
